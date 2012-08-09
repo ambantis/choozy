@@ -7,4 +7,6 @@
                  [enlive "1.0.0"]
                  [jbcrypt "0.3"]
                  [joda-time "1.6"]
-                 [zljdb "0.1.0-SNAPSHOT"]])
+                 [clj-http "0.5.2"]
+                 [zljdb "0.1.0-SNAPSHOT"]
+                 [cheshire "4.0.1"]])
