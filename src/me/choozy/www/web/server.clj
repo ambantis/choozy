@@ -55,7 +55,11 @@
   "public/results.html"
   [request]
   [:p#zip] (en/append (:zip (:params request)))
-  [:p#results] (en/content data/brides6))
+  [:#brides :li] (en/clone-for
+                [[id bride] (data/get-brides-by-zip
+                             (-> request :params :zip))]
+                [:a] (en/content (format "%s %s" (bride :first-name)
+                                         (bride :last-name)))))
 
 (compojure.core/defroutes app*
   (compojure.route/resources "/")
